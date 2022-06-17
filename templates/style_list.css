@@ -1,0 +1,38 @@
+
+
+p{
+
+    color: blue;
+}
+
+:root{
+    --clr: #516f7e;
+}
+
+body{
+background: #516f7e;
+ padding-top: 30px;
+ display:flex; 
+ justify-content: center;
+ align-items: center;
+
+}
+
+.rect{
+
+position: relative;
+width: 400px;
+height: 800px;
+background: rgb(248, 160, 236);
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+transition:  2s;
+}
+
+.rect:hover {
+
+    background: rgb(255, 236, 252);   
+    border-radius: 200px; 
+}

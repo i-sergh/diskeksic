@@ -4,3 +4,7 @@ from django.http import HttpResponse
 def index(reqest):
     #return HttpResponse('<H1>Дискексик</H1>')
     return render(reqest, 'index.html')
+
+
+def signup(request):
+    return render(request, 'signup.html')

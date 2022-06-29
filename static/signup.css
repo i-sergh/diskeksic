@@ -31,9 +31,12 @@ main{
     min-height: 100vh; 
     background: linear-gradient(to right top, #ab77ff, #6cdbeb);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+
 
 .glass{
     background: white;

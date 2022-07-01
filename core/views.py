@@ -35,9 +35,10 @@ def signup(request):
             else:
                 user = User.objects.create_user(username=username,email=email, password=password)
                 user.save()
-                print(username)
-                user_model = User.objects.get(username)
-                profile = Profile.objects.create(user=username, id_user=user_model.id)
+                
+                user_model = User.objects.get(username=username)
+                
+                profile = Profile.objects.create(user=user_model, id_user=user_model.id)
                 profile.save()
                 return redirect('signup')
         else:

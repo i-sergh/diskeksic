@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    color: #426696;
+    font-weight: 900;
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+p{
+    color: #426696;
+    font-weight: 500;
+    opacity: 0.8;
+}
+a{
+    color: #e91e62;
+    text-decoration: none;
+    transition: 0.5s;
+}
+a:hover{
+    color:#ab77ff;
+    font-size: 60px;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+main{
+    font-family: 'Fira Sans';
+    min-height: 100vh; 
+    background: linear-gradient(to right top, #ab77ff, #6cdbeb);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.glass{
+    background: white;
+    min-height: 20vh;
+    min-width: 40vh;
+    
+    background: linear-gradient(to right bottom, rgba(255, 255,255, 0.7), rgba(255,255,235,0.3));
+    border-radius: 20px;
+    backdrop-filter: blur(2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px 0;
+}
+
+.txt_field{
+    position: relative;
+    border-bottom: 2px solid #426696;
+    margin: 30px 0;
+
+}
+.txt_field input{
+    width: 100%;
+    height: 3rem;
+    padding: 0 5px;
+    font-size: 1.5rem;
+    color: #e91e62;
+    font-family: 'Fira sans';
+    background: none;
+    border: none;
+    outline: none;
+    
+}
+.txt_field label{
+    font-family: 'Fira Sans' ;
+    position: absolute;
+    font-size: 1rem;
+    top: 50%;
+    left: 5px;
+    color:#e91e62;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.txt_field span::before{
+    content:'';
+    position: absolute;
+    top:48px;
+    left:0;
+    width: 0%;
+    height: 2px;
+    background: #ab77ff;
+    transition: 1s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: 60px;
+    color:#426696;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+
+}
+
+.pass{
+    margin: -5px 0 20px 5px;
+    color:#426696;
+    cursor: pointer;
+}
+
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="submit"] {
+    width:100%;
+    height: 50px;
+    background: linear-gradient(
+        to left top,
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.5)
+    );
+    
+    border: 1px solid;
+    border-radius:20px;
+    font-size: 1.5rem;
+    color:#426696;
+    font-family: 'Fira sans';
+    transition: 1s;
+    cursor:pointer;
+    border-color:rgba(255, 255,255, 0.0) ;
+}
+input[type="submit"]:hover{
+    border-color: #e91e62;
+    transition: 1s;
+}
+input[type="submit"]:active{
+    border-color: #ab77ff;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.5)
+    );
+    transition: 0.2s;
+}
+.signup_link{
+    margin: 20px 0;
+
+}
+
+.block {
+    display: flex;
+    padding: 30px;
+}
+.block .txt_field{
+    margin-right: 20px;
+}

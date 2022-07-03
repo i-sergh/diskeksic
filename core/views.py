@@ -18,6 +18,11 @@ def index(reqest):
     return render(reqest, 'index.html')
 
 
+    
+@login_required(login_url='signin')
+def settings(request):
+    return render(request, 'user_settings.html') 
+
 def signup(request):
     
     if request.method == 'POST':
@@ -69,6 +74,7 @@ def signin(request):
     else:
         return render(request, 'signin.html')
 
+@login_required(login_url='signin')
 def logout(request):
     auth.logout(request)
     return redirect('signin')

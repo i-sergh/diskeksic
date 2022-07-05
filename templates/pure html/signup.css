@@ -55,7 +55,7 @@ main{
 .txt_field{
     position: relative;
     border-bottom: 2px solid #426696;
-    margin: 30px 0;
+    
 
 }
 .txt_field input{
@@ -149,10 +149,3 @@ input[type="submit"]:active{
 
 }
 
-.block {
-    display: flex;
-    padding: 30px;
-}
-.block .txt_field{
-    margin-right: 20px;
-}

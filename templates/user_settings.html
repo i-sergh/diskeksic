@@ -8,9 +8,10 @@
     <meta mame="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Hello {{ user.username }} </title>
 
-    <!--<link rel="stylesheet" href="{% static 'signup.css' %}" />-->
-    <link rel="stylesheet" href="signup.css" />
-    <link rel="stylesheet" href="user_settings.css" />
+    <link rel="stylesheet" href="{% static 'signup.css' %}" />
+    <link rel="stylesheet" href="{% static 'user_settings.css' %}" />
+    <!-- <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="user_settings.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
@@ -23,31 +24,40 @@
         <section class="glass">
 
             <h1> <b>{{ user.username }}</b> / User settings</h1>
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <!-- cross site request forgery -->
                 {% csrf_token %}
                 <div class="block">
                     <div class="txt_field">
-                        <input type="text" name="first_name" required />
+                        <input type="text" name="first_name" value="{{ user.first_name }}"  />
                         <span></span>
                         <label> First name</label>
                     </div>
                     <div class="txt_field">
-                        <input type="text" name="last_name" required />
+                        <input type="text" name="last_name" value="{{ user.last_name }}"  />
                         <span></span>
                         <label> Last name</label>
                     </div>
                 </div>
                 <div class="block">
+                    <img src="{{user_profile.profileimg.url}}" width="100px" height="100px">
                     <div class="txt_field">
-                        <input type="text" name="user_bio" required />
-                        <label> About u</label>
+                            <input type="file" name="profile_img"   />
+                            <span></span>
+                            <label> Profile image</label>
+                    </div>
+                    
+                </div>
+                <div class="block">
+                    <div class="txt_field">
+                        <textarea type="text" name="bio" rows="4" placeholder="About u" >{{user_profile.bio}}</textarea>
+                        <!-- <label> About u</label> -->
                         <span></span>
                     </div>
                 </div>
                 <div class="block">
                     <div class="txt_field">
-                        <input type="text" name="location" required />
+                        <input type="text" name="location"  value="{{user_profile.location}}" />
                         <label> Location</label>
                         <span></span>
                     </div>

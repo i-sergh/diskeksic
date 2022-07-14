@@ -1,0 +1,32 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    font-family: 'Fira Sans';
+    min-height: 100vh; 
+    background: linear-gradient(to right top, #ab77ff, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+h3{
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+}
+h2, p{
+    color: #e91e62;
+    font-weight: 500;
+    opacity: 0.8;
+}

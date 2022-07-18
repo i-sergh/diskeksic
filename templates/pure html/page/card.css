@@ -41,16 +41,11 @@
 
     display:flex;
     padding: 1rem;
-    flex-direction: column;
+    
     justify-content: space-between;
 }
 
-.marks{
-    font-weight: bold;
-    background: linear-gradient(to left bottom, #ab77ff, #6cdbeb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 
 .card_content div{
     display:flex;
@@ -58,7 +53,21 @@
     justify-content: space-between;
 }
 .upper_line {
-    display:flex;
+    
+    
     padding: 1rem;
 }
+.card_title{
 
+    color: #e91e62;
+    font-size: 24pt;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.marks {
+    font-weight: bold;
+    background: linear-gradient(to left bottom, #ab77ff, #6cdbeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
